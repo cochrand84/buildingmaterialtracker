@@ -54,19 +54,14 @@ $LOGIN_INFORMATION = array(
 // NOTE: all rows except last must have comma "," at the end of line
 $LOGIN_INFORMATION = array(
   'david' => 'shotput',
-  'josh'  => 'timeout',
-  'tim'   => 'area51',
-  'bill'  => 'area51',
-  'josh2' => 'area51',
-  'cain'  => 'area51',
-  'terry' => 'area51'
+  'lakeside' => 'lakeside'
 );
 
 // request login? true - show login and password boxes, false - password box only
 define('USE_USERNAME', true);
 
 // User will be redirected to this page after logout
-define('LOGOUT_URL', 'http://checkin.area51custom.com/index.php');
+define('LOGOUT_URL', 'http://lakeside.davidcochran.us/index.php');
 
 // time out after NN minutes of inactivity. Set to 0 to not timeout
 define('TIMEOUT_MINUTES', 1440);

@@ -8,11 +8,11 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Area 51 Check-in App</title>
+	<title>Lakeside Building Materials</title>
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" herf="lightbox/css/lightbox.css">
 </head>
 
 <body>
-	<h1>Area 51 Check-in App</h1>
+	<h1>Lakeside Building Materials</h1>
