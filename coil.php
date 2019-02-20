@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-<h2>Create a new ticket</h2>
+<h2>Coil weight and footage chart</h2>
 <div class="container">
   <form method="post" enctype="multipart/form-data">
     <div class="row">
