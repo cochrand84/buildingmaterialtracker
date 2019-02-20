@@ -10,15 +10,15 @@ if (isset($_POST['submit'])) {
 	try  {
         $connection = new PDO($dsn, $username, $password, $options);
         $new_ticket = array(
-            "firstname"                     => $_POST['firstname'],
-            "lastname"                      => $_POST['lastname'],
+            "vendorcoilno"                     => $_POST['vendorcoilno'],
+            "lbmcoilno"                      => $_POST['lbmcoilno'],
             "email"                         => $_POST['email'],
-            "phone"                         => $_POST['phone'],
-            "cellphone"                     => $_POST['cellphone'],
+            "coilgrade"                         => $_POST['coilgrade'],
+            "footage"                     => $_POST['footage'],
             "date"                          => $_POST['date'],
-            "address"                       => $_POST['address'],
-            "city"                          => $_POST['city'],
-            "state"                         => $_POST['state'],
+            "tagfrossweight"                       => $_POST['tagfrossweight'],
+            "tagnetweight"                          => $_POST['tagnetweight'],
+            "gauge"                         => $_POST['gauge'],
             "color"                         => $_POST['color'],
             "gauge"                         => $_POST['gauge'],
             "del"                           => $_POST['del'],
@@ -47,8 +47,8 @@ if (isset($_POST['submit'])) {
                 ":" . implode(", :", array_keys($new_ticket))
         );
         
-        $statement = $connection->prepare($sql);
-        $statement->execute($new_ticket);
+        $gaugement = $connection->prepare($sql);
+        $gaugement->execute($new_ticket);
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
@@ -64,18 +64,18 @@ if (isset($_POST['submit'])) {
   <form method="post" enctype="multipart/form-data">
     <div class="row">
       <div class="col-25">
-        <label for="firstname">First Name</label>
+        <label for="vendorcoilno">Vendor Coil #</label>
       </div>
       <div class="col-75">
-        <input type="text" name="firstname" id="firstname" required>
+        <input type="text" name="vendorcoilno" id="vendorcoilno" required>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lastname">Last Name</label>
+        <label for="lbmcoilno">LBM Coil #</label>
       </div>
       <div class="col-75">
-        <input type="text" name="lastname" id="lastname" required>
+        <input type="text" name="lbmcoilno" id="lbmcoilno" required>
       </div>
     </div>
 	  <div class="row">
@@ -88,42 +88,42 @@ if (isset($_POST['submit'])) {
 	  </div>
     <div class="row">
       <div class="col-25">
-        <label for="address">Address</label>
+        <label for="tagfrossweight">tagfrossweight</label>
       </div>
       <div class="col-75">
-        <input type="text" name="address" id="address" >
+        <input type="text" name="tagfrossweight" id="tagfrossweight" >
       </div>
     </div>
 	      <div class="row">
       <div class="col-25">
-        <label for="city">City</label>
+        <label for="tagnetweight">tagnetweight</label>
       </div>
       <div class="col-75">
-        <input type="text" name="city" id="city" >
+        <input type="text" name="tagnetweight" id="tagnetweight" >
       </div>
     </div>
 	  	      <div class="row">
       <div class="col-25">
-        <label for="state">State</label>
+        <label for="gauge">gauge</label>
       </div>
       <div class="col-75">
-        <input type="text" name="state" id="state" >
+        <input type="text" name="gauge" id="gauge" >
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="phone">Phone Number</label>
+        <label for="coilgrade">coilgrade Number</label>
       </div>
       <div class="col-75">
-        <input type="tel" name="phone" id="phone">
+        <input type="tel" name="coilgrade" id="coilgrade">
       </div>
     </div>
 	  <div class="row">
       <div class="col-25">
-        <label for="cellphone">Cell Number</label>
+        <label for="footage">Footage</label>
       </div>
       <div class="col-75">
-        <input type="tel" name="cellphone" id="cellphone">
+        <input type="tel" name="footage" id="footage">
       </div>
     </div>
     <div class="row">
@@ -152,19 +152,7 @@ if (isset($_POST['submit'])) {
       
     </div>
 	  </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="coil">Coil</label>
-      </div>
-      <div class="col-75">
-          
-    <select id="coil" name="coil" >
-      <option value="717341055-3">717341055-3</option>
-      <option value="31">31</option>
-    </select>
-      
-    </div>
-    </div>
+    
 	  <div class="row">
       <div class="col-25">
         <label for="del">Delivery</label>
@@ -183,19 +171,19 @@ if (isset($_POST['submit'])) {
     </div>
 	  <div id="addinput">
     <p>
-		<input type="text" id="qty1" size="20" name="qty1" value="" placeholder="Qty" /><input type="text" id="length1" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc1" size="40" name="desc1" value="" placeholder="Description" />
+		<input type="date" name="date1" value="" min="<?php echo date("Y-m-d"); ?>" required><input type="text" id="length1" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc1" size="40" name="desc1" value="" placeholder="Description" />
     </p>
 		      <p>
-		<input type="text" id="qty2" size="20" name="qty2" value="" placeholder="Qty" /><input type="text" id="length2" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc2" size="40" name="desc2" value="" placeholder="Description" />
+		<input type="date" name="date2" value="" min="<?php echo date("Y-m-d"); ?>" required><input type="text" id="length2" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc2" size="40" name="desc2" value="" placeholder="Description" />
     </p>
 		      <p>
-		<input type="text" id="qty3" size="20" name="qty3" value="" placeholder="Qty" /><input type="text" id="length3" size="40" name="length3" value="" placeholder="Length" /><input type="text" id="desc3" size="40" name="desc3" value="" placeholder="Description" />
+		<input type="date" name="date3" value="" min="<?php echo date("Y-m-d"); ?>" required><input type="text" id="length3" size="40" name="length3" value="" placeholder="Length" /><input type="text" id="desc3" size="40" name="desc3" value="" placeholder="Description" />
     </p>
 		      <p>
-		<input type="text" id="qty4" size="20" name="qty4" value="" placeholder="Qty" /><input type="text" id="length4" size="40" name="length4" value="" placeholder="Length" /><input type="text" id="desc4" size="40" name="desc_new" value="" placeholder="Description" />
+		<input type="date" name="date4" value="" min="<?php echo date("Y-m-d"); ?>" required><input type="text" id="length4" size="40" name="length4" value="" placeholder="Length" /><input type="text" id="desc4" size="40" name="desc_new" value="" placeholder="Description" />
     </p>
 		      <p>
-		<input type="text" id="qty5" size="20" name="qty5" value="" placeholder="Qty" /><input type="text" id="length5" size="40" name="length5" value="" placeholder="Length" /><input type="text" id="desc5" size="40" name="desc5" value="" placeholder="Description" />
+		<input type="date" name="date5" value="" min="<?php echo date("Y-m-d"); ?>" required><input type="text" id="length5" size="40" name="length5" value="" placeholder="Length" /><input type="text" id="desc5" size="40" name="desc5" value="" placeholder="Description" />
     </p>
 </div>
     <div class="row">
