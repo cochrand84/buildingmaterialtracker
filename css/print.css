@@ -1,0 +1,32 @@
+
+
+@media print {
+body {
+background-image: url(../images/background.png);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100%;
+-webkit-print-color-adjust: exact;
+}
+
+.col1 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.col2 {
+  float: right;
+  width: 50%;
+  margin-top: 6px;
+}
+}
+
+@page {
+    margin-left: 50mm;
+    margin-right: 50mm;
+    margin-top: 50mm;
+    margin-bottom: 50mm;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+}

@@ -1,32 +1,65 @@
-<!doctype html>
+<?php
+require "includes/header.php";
+include "includes/password_protect.php"; 
+
+if (isset($_POST['submit'])) {
+
+    require "includes/config.php";
+    require "includes/common.php";  
+
+	try  {
+        $connection = new PDO($dsn, $username, $password, $options);
+        $vinuppercase = strtoupper($VIN);
+        $new_user = array(
+            "vin"                       => $vinuppercase,
+            "firstname"                 => $_POST['firstname'],
+            "lastname"                  => $_POST['lastname'],
+            "email"                     => $_POST['email'],
+            "phone"                     => $_POST['phone'],
+            "year"                      => $ModelYear,
+            "location"                  => $_POST['location'],
+            "status"                    => $_POST['status'],
+            "make"                      => $Make,
+            "model"                     => $Model,
+            "due_date"                  => $_POST['due_date'],
+            "image1"                    => $rand,
+            "image2"                    => $rand2,
+            "image3"                    => $rand3,
+            "image4"                    => $rand4,
+            "description"               => $_POST['description'],
+            "oilchange"                 => $_POST['oilchange'],
+            "fullservice"               => $_POST['fullservice'],
+            "otherservice"              => $_POST['otherservice'],
+            "otherservicedescription"   => $_POST['otherservicedescription'],
+            "fronttirechange"           => $_POST['fronttirechange'],
+            "reartirechange"            => $_POST['reartirechange'],
+            "audiotroubleshooting"      => $_POST['audiotroubleshooting'],
+            "otheraudiodescription"     => $_POST['otheraudiodescription'],
+            "fullaudiosystem"           => $_POST['fullaudiosystem'],
+            "audioupgrade"              => $_POST['audioupgrade']
+        );   
+
+        $sql = sprintf(
+                "INSERT INTO %s (%s) values (%s)",
+                "tickets",
+                implode(", ", array_keys($new_user)),
+                ":" . implode(", :", array_keys($new_user))
+        );
+        
+        $statement = $connection->prepare($sql);
+        $statement->execute($new_user);
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+    
+}
+
+?>
+
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
-	<script  src="<span id="IL_AD8" class="IL_AD">https</span>://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>        
-<script type="text/javascript">
-$(function() {
-var addDiv = $('#addinput');
-var i = $('#addinput p').size() + 1;
-
-$('#addNew').live('click', function() {
-$('<p><input type="text" id="qty_new" size="20" name="qty_' + i +'" value="" placeholder="Qty" /><input type="text" id="length_new" size="40" name="length_' + i +'" value="" placeholder="Qty" /><input type="text" id="desc_new" size="40" name="desc_' + i +'" value="" placeholder="Qty" /><a href="#" id="remNew">Remove</a> </p>').appendTo(addDiv);
-i++;
-
-return false;
-});
-
-$('#remNew').live('click', function() {
-if( i > 2 ) {
-$(this).parents('p').remove();
-i--;
-}
-return false;
-});
-});
-
-</script>
-
+<title>Untitled Document</title>       
 </head>
 
 <body>
@@ -142,7 +175,19 @@ return false;
     </div>
 	  <div id="addinput">
     <p>
-		<input type="text" id="qty_new" size="20" name="qty" value="" placeholder="Qty" /><input type="text" id="length_new" size="40" name="length" value="" placeholder="Length" /><input type="text" id="desc_new" size="40" name="desc_new" value="" placeholder="Description" /><a href="#" id="addNew">Add</a>
+		<input type="text" id="qty_new" size="20" name="qty" value="" placeholder="Qty" /><input type="text" id="length_new" size="40" name="length" value="" placeholder="Length" /><input type="text" id="desc_new" size="40" name="desc_new" value="" placeholder="Description" />
+    </p>
+		      <p>
+		<input type="text" id="qty_new" size="20" name="qty" value="" placeholder="Qty" /><input type="text" id="length_new" size="40" name="length" value="" placeholder="Length" /><input type="text" id="desc_new" size="40" name="desc_new" value="" placeholder="Description" />
+    </p>
+		      <p>
+		<input type="text" id="qty_new" size="20" name="qty" value="" placeholder="Qty" /><input type="text" id="length_new" size="40" name="length" value="" placeholder="Length" /><input type="text" id="desc_new" size="40" name="desc_new" value="" placeholder="Description" />
+    </p>
+		      <p>
+		<input type="text" id="qty_new" size="20" name="qty" value="" placeholder="Qty" /><input type="text" id="length_new" size="40" name="length" value="" placeholder="Length" /><input type="text" id="desc_new" size="40" name="desc_new" value="" placeholder="Description" />
+    </p>
+		      <p>
+		<input type="text" id="qty_new" size="20" name="qty" value="" placeholder="Qty" /><input type="text" id="length_new" size="40" name="length" value="" placeholder="Length" /><input type="text" id="desc_new" size="40" name="desc_new" value="" placeholder="Description" />
     </p>
 </div>
     <div class="row">
