@@ -196,7 +196,7 @@ if (isset($_POST['submit'])) {
   </form>
 </div>
 <?php 
-require "includes/common.php"; 
+require "includes/footer.php"; 
 ?>
 </body>
 </html>
