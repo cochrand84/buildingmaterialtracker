@@ -112,6 +112,9 @@ if (isset($_POST['refreshdatabase'])) {
 
         $statement2 = $connection->prepare($sql2);
         $statement2->execute();
+        
+include "install.php";
+
 
         $sql3 = "INSERT INTO vertracker (ver) VALUES ($ver)";
 
