@@ -2,7 +2,6 @@
 <?php
 
 require "config.php";
-require "common.php";
 
 $connection = new PDO($dsn, $username, $password, $options);
 
