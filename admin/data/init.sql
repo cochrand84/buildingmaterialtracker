@@ -40,6 +40,6 @@ CREATE TABLE images (
 
 CREATE TABLE vertracker (
 	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	ver DECIMAL(5),
+	ver FLOAT(5),
 	date_time datetime
 );

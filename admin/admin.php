@@ -20,13 +20,13 @@ if (isset($_POST['verup'])) {
         $result = $statement->fetchAll();
 
         if ($result && $statement->rowCount() > 0) {
-        $ver = "0.0.5";
+        $ver = "0.05";
         foreach ($result as $row) { 
                     $ver                         = $row["ver"]; }                   
         } else { 
         echo $_POST['status'];
         } 
-        $increase = "0.0.1";
+        $increase = "0.01";
         $newver = $ver + $increase;
         echo $increase;
         $dataTime = date("Y-m-d H:i:s");
