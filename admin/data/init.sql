@@ -17,7 +17,7 @@ CREATE TABLE tickets (
     coil1 VARCHAR(15), 
     coil2 VARCHAR(15),
     del VARCHAR(15),  
-    pickuptimetime VARCHAR(15),
+    pickuptime VARCHAR(15),
     qty1 VARCHAR(15),
     length1 VARCHAR(15),
     desc1 VARCHAR(15),
@@ -32,7 +32,8 @@ CREATE TABLE tickets (
     desc4 VARCHAR(15),
     qty5 VARCHAR(15),
     length5 VARCHAR(15),
-    desc5 VARCHAR(15)
+    desc5 VARCHAR(15),
+    status VARCHAR(15)
 );
 
 CREATE TABLE images (
