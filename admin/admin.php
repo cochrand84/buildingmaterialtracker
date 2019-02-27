@@ -28,6 +28,7 @@ if (isset($_POST['verup'])) {
         } 
         $increase = "0.0.1";
         $newver = $ver + $increase;
+        echo $increase;
         $dataTime = date("Y-m-d H:i:s");
 
             try  {
