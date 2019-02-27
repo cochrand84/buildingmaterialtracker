@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by due_date ASC";
+        $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by date ASC";
 
         $location = $_POST['location'];
 
@@ -84,7 +84,7 @@ if (isset($_POST['submit3'])) {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM tickets WHERE (status = 'complete') ORDER by due_date ASC";
+        $sql = "SELECT * FROM tickets WHERE (status = 'complete') ORDER by date ASC";
 
         $location = $_POST['location'];
 
@@ -120,7 +120,7 @@ if (isset($_POST['submit4'])) {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT *  FROM tickets ORDER by due_date ASC";
+        $sql = "SELECT *  FROM tickets ORDER by date ASC";
 
         $location = $_POST['location'];
 
