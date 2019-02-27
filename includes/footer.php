@@ -6,7 +6,7 @@ require "common.php";
 
 $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT 1 FROM vertracker";
+        $sql = "SELECT * FROM `vertracker` WHERE 1 ORDER by ver ASC";
 
         $location = $_POST['location'];
 
@@ -15,6 +15,15 @@ $connection = new PDO($dsn, $username, $password, $options);
         $statement->execute();
 
         $result = $statement->fetchAll();
+
+        if ($result && $statement->rowCount() > 0) {
+        foreach ($result as $row) { 
+                    $ver                         = $row["ver"]; 
+                    $verdate					 = $row["date_time"]
+                }                   
+        } else { 
+        echo $_POST['status'];
+        } 
 
         ?>
 </br>
@@ -26,6 +35,8 @@ $connection = new PDO($dsn, $username, $password, $options);
 <a href="index.php" class="linkbutton">Back to home</a>
 <a href="ticket.php" class="linkbutton">Create a new ticket</a>
 <a href="coil.php" class="linkbutton">Coil weight and Footage Chart</a>
+
+Version <?php echo $ver; ?> built on <?php echo $verdate; ?>
 
 </br>
 </br>
