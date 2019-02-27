@@ -6,7 +6,7 @@ CREATE TABLE tickets (
 	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	firstname VARCHAR(15),
     lastname VARCHAR(15),
-    date DATETIME(15),
+    date DATETIME,
     address VARCHAR(15),
     city VARCHAR(15),
     state VARCHAR(15),
