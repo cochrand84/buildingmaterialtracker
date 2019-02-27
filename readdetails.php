@@ -1,6 +1,6 @@
 <?php
-require "includes/header.php";
-include "includes/password_protect.php"; 
+require "templates/header.php";
+include "templates/password_protect.php"; 
 
 if (isset($_POST['submit'])) {
     try  {
@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by due_date ASC";
+        $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by date ASC";
 
         $location = $_POST['location'];
 
@@ -37,9 +37,18 @@ if (isset($_POST['submit'])) {
                     <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
+                    <th>Year</th>
+                    <th>Location</th>
                     <th>Date</th>
+                    <th>Vin Number</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Due Date</th>
                     <th>Status</th>
-
+                    <th>Image 1</th>
+                    <th>Image 2</th>
+                    <th>Image 3</th>
+                    <th>Image 4</th>
                 </tr>
             </thead>
             <tbody>
@@ -48,9 +57,18 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["id"]); ?></td>
                 <td><?php echo escape($row["firstname"]); ?></td>
                 <td><?php echo escape($row["lastname"]); ?></td>
+                <td><?php echo escape($row["year"]); ?></td>
+                <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
+                <td><?php echo escape($row["vin"]); ?> </td>
+                <td><?php echo escape($row["make"]); ?> </td>
+                <td><?php echo escape($row["model"]); ?> </td>
+                <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>                
-
+              <td><a href="view.php?rand=<?php echo $row["image1"]; ?>"><img src="view.php?rand=<?php echo $row["image1"]; ?>" alt="<?php echo $row["image1"]; ?>" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image2"]; ?>"><img src="view.php?rand=<?php echo $row["image2"]; ?>" alt="<?php echo $row["image2"]; ?>" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image3"]; ?>"><img src="view.php?rand=<?php echo $row["image3"]; ?>" alt="<?php echo $row["image3"]; ?>" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image4"]; ?>"><img src="view.php?rand=<?php echo $row["image4"]; ?>" alt="<?php echo $row["image4"]; ?>" height="42" width="42"></a></td>
             </tr>
         <?php } ?>
         </tbody>
@@ -71,4 +89,4 @@ if (isset($_POST['submit'])) {
     <input type="submit" name="submit3" value="View Complete">
 </form>
 
-<?php require "includes/footer.php"; ?>
+<?php require "templates/footer.php"; ?>
