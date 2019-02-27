@@ -48,7 +48,9 @@ if (isset($_POST['installtables'])) {
         
         include "install.php";
 
-    } 
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
 }
 
 ?>
