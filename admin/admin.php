@@ -71,7 +71,7 @@ if (isset($_POST['dropalltables'])) {
 
         $statement = $connection->prepare($sql);
         $statement->execute();
-        echo "Database droped successfully"
+        echo "Database droped successfully";
         $result = $statement->fetchAll();
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
