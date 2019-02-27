@@ -64,14 +64,14 @@ if (isset($_POST['dropalltables'])) {
     try  {
         
         require "../includes/config.php";
-
+  
         $connection = new PDO($dsn, $username, $password, $options);
 
         $sql = "DROP DATABASE admin_lakeside";
 
         $statement = $connection->prepare($sql);
         $statement->execute();
-        echo "Database droped successfully";
+        echo "Database dropped successfully";
         $result = $statement->fetchAll();
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
@@ -84,6 +84,45 @@ if (isset($_POST['installtables'])) {
         include "install.php";
 
     
+}
+
+if (isset($_POST['refreshdatabase'])) {
+    try  {
+        require "../includes/config.php";
+        $connection = new PDO($dsn, $username, $password, $options);
+
+        $sql1 = "SELECT * FROM `vertracker` WHERE 1 ORDER by ver ASC";
+
+        $location = $_POST['location'];
+
+        $statement1 = $connection->prepare($sql1);
+        $statement1->bindParam(':location', $location, PDO::PARAM_STR);
+        $statement1->execute();
+
+        $result1 = $statement1->fetchAll();
+
+        if ($result1 && $statement1->rowCount() > 0) {
+        foreach ($result1 as $row) { 
+                    $ver                         = $row["ver"]; }                   
+        } else { 
+        echo $_POST['status'];
+        } 
+
+        $sql2 = "DROP DATABASE admin_lakeside";
+
+        $statement2 = $connection->prepare($sql2);
+        $statement2->execute();
+
+        $sql3 = "INSERT INTO vertracker (ver) VALUES ($ver)";
+
+        $statement3 = $connection->prepare($sql3);
+        $statement3->execute();
+
+        echo "Database refreshed successfully";
+
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
 }
 
 ?>
