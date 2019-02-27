@@ -112,8 +112,16 @@ if (isset($_POST['refreshdatabase'])) {
 
         $statement2 = $connection->prepare($sql2);
         $statement2->execute();
-        
-include "install.php";
+
+        try {
+    $connection = new PDO("mysql:host=$host", $username, $password, $options);
+    $sql = file_get_contents("data/init.sql");
+    $connection->exec($sql);
+    
+    echo "Database and table tickets created successfully.";
+} catch(PDOException $error) {
+    echo $sql . "<br>" . $error->getMessage();
+}
 
 
         $sql3 = "INSERT INTO vertracker (ver) VALUES ($ver)";
