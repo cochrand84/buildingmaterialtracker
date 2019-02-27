@@ -1,3 +1,5 @@
+CREATE DATABASE admin_lakeside;
+
 use admin_lakeside;
 
 CREATE TABLE tickets (
@@ -43,3 +45,5 @@ CREATE TABLE vertracker (
 	ver FLOAT(5),
 	date_time datetime
 );
+
+INSERT INTO vertracker (ver) VALUES (0.01);

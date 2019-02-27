@@ -5,7 +5,6 @@ if (isset($_POST['verup'])) {
     try  {
         
         require "../includes/config.php";
-        require "../includes/common.php";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
@@ -65,15 +64,14 @@ if (isset($_POST['dropalltables'])) {
     try  {
         
         require "../includes/config.php";
-        require "../includes/common.php";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "EXEC tickets 'ALTER TABLE ? NOCHECK CONSTRAINT all'";
+        $sql = "DROP DATABASE admin_lakeside";
 
         $statement = $connection->prepare($sql);
         $statement->execute();
-
+        echo "Database droped successfully"
         $result = $statement->fetchAll();
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
