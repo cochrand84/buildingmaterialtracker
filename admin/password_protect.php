@@ -131,7 +131,7 @@ if (isset($_POST['access_password'])) {
 
   $login = isset($_POST['access_login']) ? $_POST['access_login'] : '';
   $pass = $_POST['access_password'];
-  $admin = "admin"
+  $admin = "admin";
   if (!USE_USERNAME && !in_array($pass, $LOGIN_INFORMATION)
   || (USE_USERNAME && ( !array_key_exists($login, $LOGIN_INFORMATION) || $LOGIN_INFORMATION[$login] != $pass ) ) 
   ) {
