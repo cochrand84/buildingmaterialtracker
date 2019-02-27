@@ -6,7 +6,7 @@ require "common.php";
 
 $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by due_date ASC";
+        $sql = "SELECT 1 FROM vertracker";
 
         $location = $_POST['location'];
 
