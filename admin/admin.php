@@ -25,8 +25,8 @@ if (isset($_POST['verup'])) {
         } else { 
         echo $_POST['status'];
         } 
-
-        $newver = $ver + 0.0.1;
+        $increase = 0.0.1;
+        $newver = $ver + $increase;
         $dataTime = date("Y-m-d H:i:s");
 
             try  {
