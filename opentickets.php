@@ -6,6 +6,7 @@ if (isset($_POST['submit'])) {
     try  {
         
         require "includes/config.php";
+        require "includes/common.php";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
@@ -44,6 +45,7 @@ if (isset($_POST['submit2'])) {
     try  {
         
         require "includes/config.php";
+        require "includes/common.php";
 
 
         $connection = new PDO($dsn, $username, $password, $options);
@@ -80,6 +82,7 @@ if (isset($_POST['submit3'])) {
     try  {
         
         require "includes/config.php";
+        require "includes/common.php";
 
 
         $connection = new PDO($dsn, $username, $password, $options);
@@ -116,6 +119,7 @@ if (isset($_POST['submit4'])) {
     try  {
         
         require "includes/config.php";
+        require "includes/common.php";
 
 
         $connection = new PDO($dsn, $username, $password, $options);
