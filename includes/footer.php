@@ -19,7 +19,7 @@ $connection = new PDO($dsn, $username, $password, $options);
         if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
                     $ver                         = $row["ver"]; 
-                    $verdate					 = $row["date_time"]
+                    $verdate					 = $row["date_time"];
                 }                   
         } else { 
         echo $_POST['status'];
