@@ -50,7 +50,7 @@ if (isset($_POST['submit2'])) {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT *  FROM tickets ORDER by due_date ASC";
+        $sql = "SELECT *  FROM tickets ORDER by date ASC";
 
         $location = $_POST['location'];
 
