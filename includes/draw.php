@@ -28,6 +28,6 @@
       </canvas>
     </div>
 
-    <script type="text/javascript" src="draw.js"></script>
+    <script type="text/javascript" src="includes/draw.js"></script>
   </body>
 </html>
