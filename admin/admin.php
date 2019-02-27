@@ -25,7 +25,7 @@ if (isset($_POST['verup'])) {
         } else { 
         echo $_POST['status'];
         } 
-        $increase = '0.0.1';
+        $increase = "0.0.1";
         $newver = $ver + $increase;
         $dataTime = date("Y-m-d H:i:s");
 
@@ -45,6 +45,8 @@ if (isset($_POST['verup'])) {
         
         $statement = $connection->prepare($sql);
         $statement->execute($new_ver);
+        echo "The version is now";
+        echo $newver;
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
