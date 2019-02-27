@@ -40,6 +40,6 @@ CREATE TABLE images (
 
 CREATE TABLE vertracker (
 	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	ver TEXT,
+	ver INT(5),
 	date_time datetime
 );

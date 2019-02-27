@@ -9,7 +9,7 @@ if (isset($_POST['verup'])) {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by due_date ASC";
+        $sql = "SELECT * FROM `vertracker` WHERE 1 ORDER by ver ASC";
 
         $location = $_POST['location'];
 
@@ -18,6 +18,38 @@ if (isset($_POST['verup'])) {
         $statement->execute();
 
         $result = $statement->fetchAll();
+
+        if ($result && $statement->rowCount() > 0) {
+        foreach ($result as $row) { 
+                    $ver                         = $row["ver"]; }                   
+        } else { 
+        echo $_POST['status'];
+        } 
+
+        $newver = $ver + 0.0.1;
+        $dataTime = date("Y-m-d H:i:s");
+
+            try  {
+        $connection = new PDO($dsn, $username, $password, $options);
+        $new_ver = array(
+            "ver"                       => $newver,
+            "date_time"                 => $dataTime
+        );   
+
+        $sql = sprintf(
+                "INSERT INTO %s (%s) values (%s)",
+                "vertracker",
+                implode(", ", array_keys($new_ver)),
+                ":" . implode(", :", array_keys($new_ver))
+        );
+        
+        $statement = $connection->prepare($sql);
+        $statement->execute($new_ver);
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+
+
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
