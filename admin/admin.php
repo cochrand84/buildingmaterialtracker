@@ -48,6 +48,7 @@ if (isset($_POST['verup'])) {
         $statement->execute($new_ver);
         echo "The version is now";
         echo $newver;
+        echo $ver;
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
