@@ -37,3 +37,9 @@ CREATE TABLE images (
 	created datetime,
 	rand INT(100)
 );
+
+CREATE TABLE vertracker (
+	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	ver TEXT,
+	date_time datetime
+);
