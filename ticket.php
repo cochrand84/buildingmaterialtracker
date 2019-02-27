@@ -11,15 +11,16 @@ if (isset($_POST['submit'])) {
         $new_ticket = array(
             "firstname"                     => $_POST['firstname'],
             "lastname"                      => $_POST['lastname'],
-            "email"                         => $_POST['email'],
-            "phone"                         => $_POST['phone'],
-            "cellphone"                     => $_POST['cellphone'],
             "date"                          => $_POST['date'],
             "address"                       => $_POST['address'],
             "city"                          => $_POST['city'],
             "state"                         => $_POST['state'],
+            "phone"                         => $_POST['phone'],
+            "cellphone"                     => $_POST['cellphone'],
             "color"                         => $_POST['color'],
             "gauge"                         => $_POST['gauge'],
+            "coil1"                         => $_POST['coil1'], 
+            "coil2"                         => $_POST['coil2'],
             "del"                           => $_POST['del'],
             "pickuptime"                    => $_POST['pickuptime'],
             "qty1"                          => $_POST['qty1'],
@@ -167,7 +168,7 @@ if (isset($_POST['submit'])) {
 	  </div>
     <div class="row">
       <div class="col-25">
-        <label for="coil">Coil 1</label>
+        <label for="coil1">Coil 1</label>
       </div>
       <div class="col-75">
           
@@ -180,7 +181,7 @@ if (isset($_POST['submit'])) {
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="coil">Coil 1</label>
+        <label for="coil2">Coil 1</label>
       </div>
       <div class="col-75">
           
@@ -212,16 +213,16 @@ if (isset($_POST['submit'])) {
 		<input type="text" id="qty1" size="20" name="qty1" value="" placeholder="Qty" /><input type="text" id="length1" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc1" size="40" name="desc1" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
     </p>
 		      <p>
-		<input type="text" id="qty2" size="20" name="qty2" value="" placeholder="Qty" /><input type="text" id="length2" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc2" size="40" name="desc2" value="" placeholder="Description" />
+		<input type="text" id="qty2" size="20" name="qty2" value="" placeholder="Qty" /><input type="text" id="length2" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc2" size="40" name="desc2" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
     </p>
 		      <p>
-		<input type="text" id="qty3" size="20" name="qty3" value="" placeholder="Qty" /><input type="text" id="length3" size="40" name="length3" value="" placeholder="Length" /><input type="text" id="desc3" size="40" name="desc3" value="" placeholder="Description" />
+		<input type="text" id="qty3" size="20" name="qty3" value="" placeholder="Qty" /><input type="text" id="length3" size="40" name="length3" value="" placeholder="Length" /><input type="text" id="desc3" size="40" name="desc3" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
     </p>
 		      <p>
-		<input type="text" id="qty4" size="20" name="qty4" value="" placeholder="Qty" /><input type="text" id="length4" size="40" name="length4" value="" placeholder="Length" /><input type="text" id="desc4" size="40" name="desc_new" value="" placeholder="Description" />
+		<input type="text" id="qty4" size="20" name="qty4" value="" placeholder="Qty" /><input type="text" id="length4" size="40" name="length4" value="" placeholder="Length" /><input type="text" id="desc4" size="40" name="desc4" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
     </p>
 		      <p>
-		<input type="text" id="qty5" size="20" name="qty5" value="" placeholder="Qty" /><input type="text" id="length5" size="40" name="length5" value="" placeholder="Length" /><input type="text" id="desc5" size="40" name="desc5" value="" placeholder="Description" />
+		<input type="text" id="qty5" size="20" name="qty5" value="" placeholder="Qty" /><input type="text" id="length5" size="40" name="length5" value="" placeholder="Length" /><input type="text" id="desc5" size="40" name="desc5" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
     </p>
 </div>
     <div class="row">
