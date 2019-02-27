@@ -44,13 +44,11 @@ if (isset($_POST['dropalltables'])) {
 }
 
 if (isset($_POST['installtables'])) {
-    try  {
+    
         
         include "install.php";
 
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
+    
 }
 
 ?>
