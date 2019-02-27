@@ -131,6 +131,7 @@ if (isset($_POST['access_password'])) {
 
   $login = isset($_POST['access_login']) ? $_POST['access_login'] : '';
   $pass = $_POST['access_password'];
+  $admin = "admin"
   if (!USE_USERNAME && !in_array($pass, $LOGIN_INFORMATION)
   || (USE_USERNAME && ( !array_key_exists($login, $LOGIN_INFORMATION) || $LOGIN_INFORMATION[$login] != $pass ) ) 
   ) {
@@ -138,7 +139,7 @@ if (isset($_POST['access_password'])) {
   }
   else {
     // set cookie if password was validated
-    setcookie("verify", md5($login.'%'.$pass), $timeout, '/');
+    setcookie("verify", md5($login.'%'.$pass.$admin), $timeout, '/');
     
     // Some programs (like Form1 Bilder) check $_POST array to see if parameters passed
     // So need to clear password protector variables

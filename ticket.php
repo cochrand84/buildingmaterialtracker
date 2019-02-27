@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 <body>
-
+Logged in as <?php echo $login ?>
 <h2>Create a new ticket</h2>
 <div class="container">
   <form method="post" enctype="multipart/form-data">
