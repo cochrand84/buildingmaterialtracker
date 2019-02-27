@@ -36,7 +36,7 @@ $connection = new PDO($dsn, $username, $password, $options);
 <a href="coil.php" class="linkbutton">Coil weight and Footage Chart</a>
 <a href="opentickets.php" class="linkbutton">show open tickets</a>
 
-Version <?php echo $ver; ?> built on <?php echo $verdate; ?>
+Version <?php echo $ver; ?> built on <?php echo $verdate; ?> UTC
 
 </br>
 </br>

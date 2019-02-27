@@ -5,7 +5,6 @@ include "includes/password_protect.php";
 if (isset($_POST['submit'])) {
 
     require "includes/config.php";
-    require "includes/common.php";  
 
 	try  {
         $connection = new PDO($dsn, $username, $password, $options);
@@ -133,8 +132,22 @@ if (isset($_POST['submit'])) {
       <div class="col-75">
           
     <select id="color" name="color" >
+      <option value="ashgrey">Ash Grey</option>
+      <option value="charcoal">Charcoal</option>
+      <option value="black">Black</option>
+      <option value="burnishedslate">Burnished Slate</option>
       <option value="barnred">Barn Red</option>
-      <option value="2">Ash Grey</option>
+      <option value="brightred">Bright Red</option>
+      <option value="white">White</option>
+      <option value="cocoabrown">Cocoa Brown</option>
+      <option value="saharatan">Sahara Tan</option>
+      <option value="lightstone">Light Stone</option>
+      <option value="burgundy">Burgundy</option>
+      <option value="hawaiianblue">Hawaiian Blue</option>
+      <option value="regalblue">Regal Blue</option>
+      <option value="galvalume">Galvalume</option>
+      <option value="green">Green</option>
+      <option value="copper">Copper</option>
     </select>
       
     </div>
@@ -146,19 +159,32 @@ if (isset($_POST['submit'])) {
       <div class="col-75">
           
     <select id="gauge" name="gauge" >
+      <option value="26">26</option>
       <option value="29">29</option>
-      <option value="31">31</option>
     </select>
       
     </div>
 	  </div>
     <div class="row">
       <div class="col-25">
-        <label for="coil">Coil</label>
+        <label for="coil">Coil 1</label>
       </div>
       <div class="col-75">
           
-    <select id="coil" name="coil" >
+    <select id="coil1" name="coil1" >
+      <option value="717341055-3">717341055-3</option>
+      <option value="31">31</option>
+    </select>
+      
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="coil">Coil 1</label>
+      </div>
+      <div class="col-75">
+          
+    <select id="coil1" name="coil1" >
       <option value="717341055-3">717341055-3</option>
       <option value="31">31</option>
     </select>
@@ -183,7 +209,7 @@ if (isset($_POST['submit'])) {
     </div>
 	  <div id="addinput">
     <p>
-		<input type="text" id="qty1" size="20" name="qty1" value="" placeholder="Qty" /><input type="text" id="length1" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc1" size="40" name="desc1" value="" placeholder="Description" />
+		<input type="text" id="qty1" size="20" name="qty1" value="" placeholder="Qty" /><input type="text" id="length1" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc1" size="40" name="desc1" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
     </p>
 		      <p>
 		<input type="text" id="qty2" size="20" name="qty2" value="" placeholder="Qty" /><input type="text" id="length2" size="40" name="length1" value="" placeholder="Length" /><input type="text" id="desc2" size="40" name="desc2" value="" placeholder="Description" />
