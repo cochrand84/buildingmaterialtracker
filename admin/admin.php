@@ -131,4 +131,5 @@ if (isset($_POST['refreshdatabase'])) {
     <input type="submit" name="verup" value="verup">
     <input type="submit" name="dropalltables" value="dropalltables">
     <input type="submit" name="installtables" value="installtables">
+    <input type="submit" name="refreshdatabase" value="refreshdatabase">
 </form>
