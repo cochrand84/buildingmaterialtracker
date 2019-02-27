@@ -1,12 +1,12 @@
 <?php
-include "public/templates/password_protect.php";
+include "includes/password_protect.php";
 /**
  * Open a connection via PDO to create a
  * new database and table with structure.
  *
  */
 
-require "config.php";
+require "includes/config.php";
 
 try {
     $connection = new PDO("mysql:host=$host", $username, $password, $options);
@@ -17,3 +17,5 @@ try {
 } catch(PDOException $error) {
     echo $sql . "<br>" . $error->getMessage();
 }
+
+?>
