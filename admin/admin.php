@@ -20,7 +20,7 @@ if (isset($_POST['verup'])) {
         $result = $statement->fetchAll();
 
         if ($result && $statement->rowCount() > 0) {
-            $ver = "0.0.5"
+        $ver = "0.0.5";
         foreach ($result as $row) { 
                     $ver                         = $row["ver"]; }                   
         } else { 
