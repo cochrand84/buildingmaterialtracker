@@ -1,9 +1,9 @@
 <?php 
-
+define('phpusername', 'phpusername');
 if(!isset($_COOKIE[phpusername])) {
 	echo "Not logged in, please login";
 } else {
-    echo "Logged in as" . $_COOKIE[phpusername];
+    echo "Logged in as " . $_COOKIE[phpusername];
 }
 ?>
 
