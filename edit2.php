@@ -67,7 +67,7 @@ if (isset($_POST['submitedit'])) {
             $editeddate                         = $_POST['date'];
            
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `address` = '$editedaddress', `phone` = '$editedphone', `city` = '$editedcity', `state` = '$editedstate', `status` = '$editedstatus', `color` = '$editedcolor', `model` = '$editedmodel', `date` = '$editeddate'
+         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `address` = '$editedaddress', `phone` = '$editedphone', `city` = '$editedcity', `state` = '$editedstate', `status` = '$editedstatus', `color` = '$editedcolor', `date` = '$editeddate'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -83,7 +83,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
     <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
 <?php } ?>
 
-        <h2>Edit a new ticket</h2>
+        <h2>Edit a ticket</h2>
 <div class="container">
   <form method="post" enctype="multipart/form-data">
     <div class="row">
