@@ -31,7 +31,7 @@ $connection = new PDO($dsn, $username, $password, $options);
 </br>
 
 <a href="includes/password_protect.php?logout=1" class="linkbutton">Logout</a>
-<a herf="admin/admin.php" class="linkbutton">Admin area</a>
+<a href="admin/admin.php" class="linkbutton">Admin Area</a>
 <a href="index.php" class="linkbutton">Back to home</a>
 <a href="ticket.php" class="linkbutton">Create a new ticket</a>
 <a href="coil.php" class="linkbutton">Coil weight and Footage Chart</a>
