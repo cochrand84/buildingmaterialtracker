@@ -143,7 +143,7 @@ if (isset($_POST['access_password'])) {
     
     // Some programs (like Form1 Bilder) check $_POST array to see if parameters passed
     // So need to clear password protector variables
-    unset($_POST['access_login']);
+   // unset($_POST['access_login']);
     unset($_POST['access_password']);
     unset($_POST['Submit']);
   }
