@@ -82,88 +82,8 @@ if (isset($_POST['submitedit'])) {
 if (isset($_POST['submitedit']) && $statement) { ?>
     <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
 <?php } ?>
-<h2>Edit a ticket</h2>
 
-
-<div class="container">
-        <form method="post" enctype="multipart/form-data">
-    <div class="row">
-        <div class="col-25">
-            <label for="vin">Ticket ID</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="ticketid" value="<?php echo $editid; ?>" name="ticketid" maxlength="255" required/>
-        </div>
-    </div>   
-    <div class="row">    
-        <div class="col-25">
-            <label for="firstname">First Name</label>
-        </div>
-        <div class="col-75">
-            <input type="text" name="firstname" id="firstname" value="<?php echo $editfirstname; ?>" required>
-        </div>
-    </div>    
-    <div class="row">     
-        <div class="col-25">
-            <label for="lastname">Last Name</label>
-        </div>
-        <div class="col-75">
-            <input type="text" name="lastname" id="lastname" value="<?php echo $editlastname; ?>"required>
-        </div>
-    </div>    
-    <div class="row">     
-        <div class="col-25">
-            <label for="address">address Address</label>
-        </div>
-        <div class="col-75">
-            <input type="text" name="address" id="address" value="<?php echo $editaddress; ?>">
-        </div>
-    </div>    
-    <div class="row">     
-        <div class="col-25">
-            <label for="phone">Phone Number</label>
-        </div>
-        <div class="col-75">
-            <input type="text" name="phone" id="phone" value="<?php echo $editphone; ?>" required> 
-        </div>
-    </div>    
-    <div class="row">     
-        <div class="col-25">   
-            <label for="state">state</label>
-        </div>
-        <div class="col-75">
-            <select name="state" id="state" required>
-            <option value="<?php echo $editstate; ?>" selected><?php echo $editstate; ?></option>
-
-            </select><br />
-        </div>
-    </div>    
-    <div class="row">     
-        <div class="col-25">
-            <label for="due_date">Due Date</label>
-        </div>
-        <div class="col-25">
-            <input type="date" name="due_date" value="<?php echo $editduedate; ?>" required>
-        </div>
-    </div>    
-    <div class="row">     
-        <div class="col-25">
-            <label for="status">Status</label>
-        </div>
-        <div class="col-75">
-            <select name="status" required>
-            <option value="<?php echo $editstatus; ?>" selected><?php echo $editstatus; ?></option>
-
-            </select><br />
-        </div>
-    </div>    
-
-    <div class="row">
-        <input type="submit" name="submitedit" value="Submit Edit">
-    </div>
-        </form>
-
-        <h2>Create a new ticket</h2>
+        <h2>Edit a new ticket</h2>
 <div class="container">
   <form method="post" enctype="multipart/form-data">
     <div class="row">
@@ -330,7 +250,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
     </p>
 </div>
     <div class="row">
-      <input type="submit" name="submit" value="Submit">
+      <input type="submit" name="submitedit" value="submit edit">
     </div>
   </form>
 </div>
