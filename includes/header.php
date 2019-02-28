@@ -1,4 +1,10 @@
+<?php 
 
+if(!isset($_COOKIE[phpusername])) {
+} else {
+    echo "Logged in as" . phpusername . $_COOKIE[phpusername]"<br>";
+}
+?>
 
 <!doctype html>
 <html lang="en">
