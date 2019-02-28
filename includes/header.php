@@ -2,7 +2,7 @@
 
 if(!isset($_COOKIE[phpusername])) {
 } else {
-    echo "Logged in as" . phpusername . $_COOKIE[phpusername]";
+    echo "Logged in as" . phpusername . $_COOKIE[phpusername];
 }
 ?>
 
