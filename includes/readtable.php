@@ -7,6 +7,7 @@
                     <th>Last Name</th>
                     <th>Status</th>
                     <th>Edit</th>
+                    <th>Print</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,6 +19,7 @@
                 <td><?php echo escape($row["lastname"]); ?></td>
                 <td><?php echo escape($row["status"]); ?> </td>                
               <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">View</a></td>
+              <td><a herf="print.php?editid=<?php echo $row["id"]; ?>">Print</a></td>
             </tr>
         <?php }  ?>
         </tbody>
