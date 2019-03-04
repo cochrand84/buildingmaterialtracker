@@ -34,17 +34,38 @@ try  {
 
 if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
-                    $editid                         = $row["id"]; 
-                    $editfirstname                  = $row["firstname"]; 
-                    $editlastname                   = $row["lastname"]; 
-                    $editaddress                      = $row["address"]; 
-                    $editcity                       = $row["city"]; 
-                    $editstate                   = $row["state"]; 
-                    $editdate                       = $row["date"]; 
-                    $editstatus                     = $row["status"];
-                    $editphone                      = $row["phone"];
-                    $editdate                    = $row["date"];
-                   
+            $editid                             = $row["id"]; 
+            $editfirstname                      = $row["firstname"]; 
+            $editlastname                       = $row["lastname"]; 
+            $editaddress                        = $row["address"]; 
+            $editcity                           = $row["city"]; 
+            $editstate                          = $row["state"]; 
+            $editdate                           = $row["date"]; 
+            $editstatus                         = $row["status"];
+            $editphone                          = $row["phone"];
+            $editdate                           = $row["date"];
+            $editcellphone                      = $row["cellphone"];
+            $editcolor                          = $row["color"];
+            $editgauge                          = $row["gauge"];
+            $editcoil1                          = $row["coil1"]; 
+            $editcoil2                          = $row["coil2"];
+            $editdel                            = $row["del"];
+            $editpickuptime                     = $row["pickuptime"];
+            $editqty1                           = $row["qty1"];
+            $editlength1                        = $row["length1"];
+            $editdesc1                          = $row["desc1"];
+            $editqty2                           = $row["qty2"];
+            $editlength2                        = $row["length2"];
+            $editdesc2                          = $row["desc2"];
+            $editqty3                           = $row["qty3"];
+            $editlength3                        = $row["length3"];
+            $editdesc3                          = $row["desc3"];
+            $editqty4                           = $row["qty4"];
+            $editlength4                        = $row["length4"];
+            $editdesc4                          = $row["desc4"];
+            $editqty5                           = $row["qty5"];
+            $editlength5                        = $row["length5"];
+            $editdesc5                          = $row["desc5"];                   
          } 
         } else { 
         echo $_POST['status'];
@@ -56,15 +77,36 @@ if (isset($_POST['submitedit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
         
             
-            $editedfirstname                        = $_POST['firstname'];
-            $editedlastname                         = $_POST['lastname'];
-            $editedaddress                            = $_POST['address'];
-            $editedphone                            = $_POST['phone'];
-            $editedcity                             = $_POST['city'];
+            $editedfirstname                     = $_POST['firstname'];
+            $editedlastname                      = $_POST['lastname'];
+            $editedaddress                       = $_POST['address'];
+            $editedphone                         = $_POST['phone'];
+            $editedcity                          = $_POST['city'];
             $editedstate                         = $_POST['state'];
-            $editedstatus                           = $_POST['status'];
-            $editedcolor                             = $_POST['color'];
-            $editeddate                         = $_POST['date'];
+            $editedstatus                        = $_POST['status'];
+            $editedcolor                         = $_POST['color'];
+            $editeddate                          = $_POST['date'];
+            $editedcellphone                     = $_POST['cellphone'];
+            $editedgauge                         = $_POST['gauge'];
+            $editedcoil1                         = $_POST['coil1']; 
+            $editedcoil2                         = $_POST['coil2'];
+            $editeddel                           = $_POST['del'];
+            $editedpickuptime                    = $_POST['pickuptime'];
+            $editedqty1                          = $_POST['qty1'];
+            $editedlength1                       = $_POST['length1'];
+            $editeddesc1                         = $_POST['desc1'];
+            $editedqty2                          = $_POST['qty2'];
+            $editedlength2                       = $_POST['length2'];
+            $editeddesc2                         = $_POST['desc2'];
+            $editedqty3                          = $_POST['qty3'];
+            $editedlength3                       = $_POST['length3'];
+            $editeddesc3                         = $_POST['desc3'];
+            $editedqty4                          = $_POST['qty4'];
+            $editedlength4                       = $_POST['length4'];
+            $editeddesc4                         = $_POST['desc4'];
+            $editedqty5                          = $_POST['qty5'];
+            $editedlength5                       = $_POST['length5'];
+            $editeddesc5                         = $_POST['desc5'];
            
 
          $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `address` = '$editedaddress', `phone` = '$editedphone', `city` = '$editedcity', `state` = '$editedstate', `status` = '$editedstatus', `color` = '$editedcolor', `date` = '$editeddate'
