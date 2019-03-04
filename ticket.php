@@ -173,10 +173,7 @@ if (isset($_POST['submit'])) {
       </div>
       <div class="col-75">
           
-    <select id="coil1" name="coil1" >
-      <option value="717341055-3">717341055-3</option>
-      <option value="31">31</option>
-    </select>
+<input type="text" name="coil1" id="coil1" >
       
     </div>
     </div>
@@ -186,10 +183,7 @@ if (isset($_POST['submit'])) {
       </div>
       <div class="col-75">
           
-    <select id="coil2" name="coil2" >
-      <option value="717341055-3">717341055-3</option>
-      <option value="31">31</option>
-    </select>
+<input type="text" name="coil2" id="coil2" >
       
     </div>
     </div>
