@@ -186,6 +186,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
     <select id="gauge" name="gauge" value="<?php echo $editgauge; ?>">
       <option value="26">26</option>
       <option value="29">29</option>
+      <option value="trimcoil">Trim Coil</option>
     </select>
       
     </div>

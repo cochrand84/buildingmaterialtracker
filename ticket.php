@@ -162,6 +162,7 @@ if (isset($_POST['submit'])) {
     <select id="gauge" name="gauge" >
       <option value="26">26</option>
       <option value="29">29</option>
+      <option value="trimcoil">Trim Coil</option>
     </select>
       
     </div>
