@@ -95,7 +95,9 @@ if ($result && $statement->rowCount() > 0) {
             $editdesc14                          = $row["desc14"];
             $editqty15                           = $row["qty15"];
             $editlength15                        = $row["length15"];
-            $editdesc15                          = $row["desc15"];                    
+            $editdesc15                          = $row["desc15"];
+            $editinvoicen                       = $row["invoiceno"];
+            $editnotes                          = $row["notes"];                  
          } 
         } else { 
         echo $_POST['status'];
@@ -301,7 +303,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
       </div>
       <div class="col-75">
           
-<input type="text" name="coil1" id="coil1" >
+<input type="text" name="coil1" id="coil1" value="<?php echo $editcoil1; ?>>
       
     </div>
     </div>
@@ -311,7 +313,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
       </div>
       <div class="col-75">
           
-<input type="text" name="coil2" id="coil2" >
+<input type="text" name="coil2" id="coil2" value="<?php echo $editcoil1; ?>>
       
     </div>
     </div>
@@ -328,7 +330,23 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <label for="pickuptime">Pick-up Time</label>
       </div>
       <div class="col-75">
-        <input type="text" name="pickuptime" id="pickuptime"value="<?php echo $editpickuptime; ?>">
+        <input type="text" name="pickuptime" id="pickuptime" value="<?php echo $editpickuptime; ?>">
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-25">
+        <label for="invoiceno">Invoice No</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="invoiceno" id="invoiceno" value="<?php echo $editinvoiceno; ?>">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="notes">Notes</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="notes" id="notes" value="<?php echo $editnotes; ?>">
       </div>
     </div>
       <div id="addinput">

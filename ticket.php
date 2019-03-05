@@ -240,7 +240,7 @@ if (isset($_POST['submit'])) {
         <label for="invoiceno">Invoice No</label>
       </div>
       <div class="col-75">
-        <input type="text" name="invoiceno" id="pinvoiceno">
+        <input type="text" name="invoiceno" id="invoiceno">
       </div>
     </div>
     <div class="row">
