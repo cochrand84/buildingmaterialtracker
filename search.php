@@ -6,11 +6,11 @@
  *
  */
 
-require "templates/header.php";
-include "templates/password_protect.php"; 
+require "includes/header.php";
+include "includes/password_protect.php"; 
 
-$_GET['editid'];
-$incommingid = $_GET['editid'];
+$_GET['searchvalue'];
+$incommingid = $_GET['searchvalue'];
 
 try  {
         
