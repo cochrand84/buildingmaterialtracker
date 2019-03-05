@@ -19,7 +19,7 @@ try  {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM `tickets` WHERE $incommingid IN (coil1, coil2, lastname)";
+        $sql = "SELECT * FROM `tickets` WHERE '$incommingid' IN (coil1, coil2, lastname)";
 
         $location = $_POST['location'];
 
