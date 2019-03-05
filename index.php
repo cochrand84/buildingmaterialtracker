@@ -6,10 +6,10 @@ include "includes/password_protect.php";
 <form method="get" action="search.php"enctype="multipart/form-data">
 <div class="row">     
         <div class="col-25">
-            <label for="editid">Search: (Coil # or Customer Lastname)</label>
+            <label for="searchvalue">Search: (Coil # or Customer Lastname)</label>
         </div>
         <div class="col-25">
-            <input type="text" name="editid" id="editid">
+            <input type="text" name="searchvalue" id="searchvalue">
         </div>
     </div> 
     <div class="row">
