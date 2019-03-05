@@ -184,7 +184,8 @@ if ($result && $statement->rowCount() > 0) {
 
 			<td>Coil Number:</td>
 
-			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editvin; ?>&print=true" /></td>
+			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editcoi1; ?>&print=true" /></td>
+            <td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editcoi2; ?>&print=true" /></td>
 
 </tr>
     </table>
