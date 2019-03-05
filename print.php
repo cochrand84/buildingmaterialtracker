@@ -8,7 +8,7 @@
 	</head>
 
 <?php
-include "templates/password_protect.php"; 
+include "includes/password_protect.php"; 
 
 /**
  * Use an HTML form to create a new entry in the
@@ -21,8 +21,8 @@ $incommingid = $_GET['editid'];
 
 try  {
         
-        require "../config.php"; 
-        require "../common.php";
+        require "includes/config.php"; 
+        require "includes/common.php";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
@@ -41,137 +41,77 @@ try  {
 
 if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
-                    $editid                         = $row["id"]; 
-                    $editvin                        = $row["vin"];
-                    $editfirstname                  = $row["firstname"]; 
-                    $editlastname                   = $row["lastname"]; 
-                    $editemail                      = $row["email"]; 
-                    $edityear                       = $row["year"]; 
-                    $editlocation                   = $row["location"]; 
-                    $editdate                       = $row["date"]; 
-                    $editstatus                     = $row["status"];
-                    $editphone                      = $row["phone"];
-                    $editimage1                     = $row["image1"];
-                    $editimage2                     = $row["image2"];
-                    $editimage3                     = $row["image3"];
-                    $editimage4                     = $row["image4"];
-                    $editduedate                    = $row["due_date"];
-                    $editdescription                = $row["description"];
-                    $editoilchange                  = $row['oilchange'];
-                    $editfullservice                = $row['fullservice'];
-                    $editotherservice               = $row['otherservice'];
-                    $editotherservicedescription    = $row['otherservicedescription'];
-                    $editfronttirechange            = $row['fronttirechange'];
-                    $editreartirechange             = $row['reartirechange'];
-                    $editaudiotroubleshooting       = $row['audiotroubleshooting'];
-                    $editotheraudiodescription      = $row['otheraudiodescription'];
-                    $editfullaudiosystem            = $row['fullaudiosystem'];
-                    $editaudioupgrade               = $row['audioupgrade'];
-
-
-                    $oilchangeckd = "";
-                    if ($editoilchange == 'true'){
-                        $oilchangeckd = "red";
-                    } else {
-                        $oilchangeckd = "";
-                    }
-                    $fullserviceckd = "";
-                    if ($editfullservice == 'true'){
-                        $fullserviceckd = "red";
-                    } else {
-                        $fullserviceckd = "";
-                    }
-                    $otherserviceckd = "";
-                    if ($editotherservice == 'true'){
-                        $otherserviceckd = "red";
-                    } else {
-                        $otherserviceckd = "";
-                    }
-                    
-
-
-                    $fronttirechangeckd = "";
-                    if ($editfronttirechange == 'true'){
-                        $fronttirechangeckd = "red";
-                    } else {
-                        $fronttirechangeckd = "";
-                    }
-                    $reartirechangeckd = "";
-                    if ($editreartirechange == 'true'){
-                        $reartirechangeckd = "red";
-                    } else {
-                        $reartirechangeckd = "";
-                    }
-                    $audiotroubleshootingckd = "";
-                    if ($editaudiotroubleshooting == 'true'){
-                        $audiotroubleshootingckd = "red";
-                    } else {
-                        $audiotroubleshootingckd = "";
-                    }
-                    
-
-
-                    $fullaudiosystemckd = "";
-                    if ($editfullaudiosystem == 'true'){
-                        $fullaudiosystemckd = "red";
-                    } else {
-                        $fullaudiosystemckd = "";
-                    }
-                    $audioupgradeckd = "";
-                    if ($editaudioupgrade == 'true'){
-                        $audioupgradeckd = "red";
-                    } else {
-                        $audioupgradeckd = "";
-                    }
+            $editid                             = $row["id"]; 
+            $editfirstname                      = $row["firstname"]; 
+            $editlastname                       = $row["lastname"]; 
+            $editaddress                        = $row["address"]; 
+            $editcity                           = $row["city"]; 
+            $editstate                          = $row["state"]; 
+            $editdate                           = $row["date"]; 
+            $editstatus                         = $row["status"];
+            $editphone                          = $row["phone"];
+            $editdate                           = $row["date"];
+            $editcellphone                      = $row["cellphone"];
+            $editcolor                          = $row["color"];
+            $editgauge                          = $row["gauge"];
+            $editcoil1                          = $row["coil1"]; 
+            $editcoil2                          = $row["coil2"];
+            $editdel                            = $row["del"];
+            $editpickuptime                     = $row["pickuptime"];
+            $editqty1                           = $row["qty1"];
+            $editlength1                        = $row["length1"];
+            $editdesc1                          = $row["desc1"];
+            $editqty2                           = $row["qty2"];
+            $editlength2                        = $row["length2"];
+            $editdesc2                          = $row["desc2"];
+            $editqty3                           = $row["qty3"];
+            $editlength3                        = $row["length3"];
+            $editdesc3                          = $row["desc3"];
+            $editqty4                           = $row["qty4"];
+            $editlength4                        = $row["length4"];
+            $editdesc4                          = $row["desc4"];
+            $editqty5                           = $row["qty5"];
+            $editlength5                        = $row["length5"];
+            $editdesc5                          = $row["desc5"];
+            $editqty6                           = $row["qty6"];
+            $editlength6                        = $row["length6"];
+            $editdesc6                          = $row["desc6"];
+            $editqty7                           = $row["qty7"];
+            $editlength7                        = $row["length7"];
+            $editdesc7                          = $row["desc7"];
+            $editqty8                           = $row["qty8"];
+            $editlength8                        = $row["length8"];
+            $editdesc8                          = $row["desc8"];
+            $editqty9                           = $row["qty9"];
+            $editlength9                        = $row["length9"];
+            $editdesc9                          = $row["desc9"];
+            $editqty10                           = $row["qty10"];
+            $editlength10                        = $row["length10"];
+            $editdesc10                          = $row["desc10"]; 
+            $editqty11                           = $row["qty11"];
+            $editlength11                        = $row["length11"];
+            $editdesc11                          = $row["desc11"];
+            $editqty12                           = $row["qty12"];
+            $editlength12                        = $row["length12"];
+            $editdesc12                          = $row["desc12"];
+            $editqty13                           = $row["qty13"];
+            $editlength13                        = $row["length13"];
+            $editdesc13                          = $row["desc13"];
+            $editqty14                           = $row["qty14"];
+            $editlength14                        = $row["length14"];
+            $editdesc14                          = $row["desc14"];
+            $editqty15                           = $row["qty15"];
+            $editlength15                        = $row["length15"];
+            $editdesc15                          = $row["desc15"];
+            $editinvoicen                       = $row["invoiceno"];
+            $editnotes                          = $row["notes"]; 
 
          } 
         } else { 
         echo $_POST['status'];
      } 
 
-if (isset($_POST['submitedit'])) {
 
-    try  {
-        $connection = new PDO($dsn, $username, $password, $options);
-        
-            $editedvin                              = $_POST['vin'];
-            $editedfirstname                        = $_POST['firstname'];
-            $editedlastname                         = $_POST['lastname'];
-            $editedemail                            = $_POST['email'];
-            $editedphone                            = $_POST['phone'];
-            $editedyear                             = $_POST['ModelYear'];
-            $editedlocation                         = $_POST['location'];
-            $editedstatus                           = $_POST['status'];
-            $editedmake                             = $_POST['Make'];
-            $editedmodel                            = $_POST['Model'];
-            $editeddue_date                         = $_POST['due_date'];
-            $editeddescription                      = $_POST['description'];
-            $editedoilchange                        = $_POST['oilchange'];
-            $editedfullservice                      = $_POST['fullservice'];
-            $editedotherservice                     = $_POST['otherservice'];
-            $editedotherservicedescription          = $_POST['otherservicedescription'];
-            $editedfronttirechange                  = $_POST['fronttirechange'];
-            $editedreartirechange                   = $_POST['reartirechange'];
-            $editedaudiotroubleshooting             = $_POST['audiotroubleshooting'];
-            $editedotheraudiodescription            = $_POST['otheraudiodescription'];
-            $editedfullaudiosystem                  = $_POST['fullaudiosystem'];
-            $editedaudioupgrade                     = $_POST['audioupgrade'];
-            
-
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade'
-         WHERE `id` = '$editid';";
-
-        $statement = $connection->prepare($sql);
-        $statement->execute($editdata);
-        echo "<meta http-equiv='refresh' content='0'>";
-
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-}
-
-if (isset($_POST['submitedit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
 <?php } ?>
 <h2>Ticket # <?php echo $editid; ?></h2>
 
@@ -184,7 +124,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 
             <td>VIN</td>
 
-            <td><?php echo $editvin; ?></td>
+            
 </tr>
             <tr>
 
@@ -198,13 +138,14 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             </tr>
             <tr>
 
-            <td>Email Address</td>
-
-            <td><?php echo $editemail; ?></td>
 
             <td>Phone Number</td>
 
             <td><?php echo $editphone; ?></td>
+
+            <td>Cell Phone</td>
+
+            <td><?php echo $editcellphone; ?></td>
             </tr>
             <tr>
  
@@ -222,20 +163,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 
             <td><?php echo $editstatus; ?></td>
 </tr>
-            <tr>
-            <td>Image 1</td>
-            <td><img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100"></td>
-
-            <td>Image 2</td>
-            <td><img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100"></td>
-</tr>
-            <td><tr>
-            <td>Image 3</td>
-            <td><img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100"></td>
-
-            <td>Image 4</td>
-            <td><img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100"></td>
-            </tr>
+            
             </table>
 <table>
             <tr>
@@ -248,58 +176,13 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             </tr>
             <tr>
 
-            <td>Description of Issue/Upgrade</td>
-</tr>
-<tr>
-            <td><?php echo $editdescription; ?></td>
-</tr>
-
-            </table></br>
-<table>
-            <tr>
-    <td>Services Requested</td>
-</tr>
-            <tr>
-            <td>Mechanical</td>
-</tr><tr>
-            <td>Oil Change/Service</td>
-            <td><div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div></td>
-            <td><div style="color:<?php echo $fullserviceckd; ?>">Full Service</div></td>
-            <td><div style="color:<?php echo $otherserviceckd; ?>">Other Service</div></td>
-        </tr>
-        <tr>
-            <td>Other Services Description:</td>
-        </tr>
-	
-        <tr>
-            <td><?php echo $editotherservicedescription; ?></td>
-            </tr></br><tr>
-            <td>Tires</td>
-            <td><div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div></td>
-            <td><div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div></td>
-</tr>
-            <tr>
-            <td>Audio</td>
-</tr><tr>
-            <td>Audio Troubleshooting</td>
-            <td><div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div></td>
-	<td>Audio Upgrade</td>
-            <td><div style="color:<?php echo $fullaudiosystemckd; ?>">Full Audio System</div></td>
-            <td><div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div></td>
-            </tr>
-<tr>
-            <td>Other Audio Description:</td>
-            </tr><tr>
-            <td><?php echo $editotheraudiodescription; ?></td>
-            
-</tr></br>
             <tr>
             </br>
 			<td>Ticket Number:</td>
 
 			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" /></td>
 
-			<td>Vin Number:</td>
+			<td>Coil Number:</td>
 
 			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editvin; ?>&print=true" /></td>
 
