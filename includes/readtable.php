@@ -19,7 +19,7 @@
                 <td><?php echo escape($row["lastname"]); ?></td>
                 <td><?php echo escape($row["status"]); ?> </td>                
               <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
-              <td><a herf="print.php?editid=<?php echo $row["id"]; ?>">Print</a></td>
+              <td><a href="print.php?editid=<?php echo $row["id"]; ?>">Print</a></td>
             </tr>
         <?php }  ?>
         </tbody>
