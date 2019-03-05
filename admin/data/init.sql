@@ -63,7 +63,9 @@ CREATE TABLE tickets (
     desc14 VARCHAR(15),
     qty15 VARCHAR(15),
     length15 VARCHAR(15),
-    desc15 VARCHAR(15)
+    desc15 VARCHAR(15),
+    notes VARCHAR(60),
+    invoiceno VARCHAR(15)
 );
 
 CREATE TABLE images (

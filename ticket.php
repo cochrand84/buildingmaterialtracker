@@ -67,7 +67,9 @@ if (isset($_POST['submit'])) {
             "desc14"                         => $_POST['desc14'],
             "qty15"                          => $_POST['qty15'],
             "length15"                       => $_POST['length15'],
-            "desc15"                         => $_POST['desc15']
+            "desc15"                         => $_POST['desc15'],
+            "invoiceno"                     => $_POST['invoiceno'],
+            "notes"                         => $_POST['notes']    
         );   
 
         $sql = sprintf(
@@ -231,6 +233,22 @@ if (isset($_POST['submit'])) {
       </div>
       <div class="col-75">
         <input type="text" name="pickuptime" id="pickuptime">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="invoiceno">Invoice No</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="invoiceno" id="pinvoiceno">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="notes">Notes</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="notes" id="notes">
       </div>
     </div>
 	  <div id="addinput">
