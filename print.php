@@ -121,12 +121,9 @@ if ($result && $statement->rowCount() > 0) {
             <td>Ticket ID</td>
 
             <td><?php echo $editid; ?></td>
-
-            <td>VIN</td>
-
             
-</tr>
-            <tr>
+    </tr>
+    <tr>
 
             <td>First Name</td>
 
@@ -135,9 +132,8 @@ if ($result && $statement->rowCount() > 0) {
             <td>Last Name</td>
 
             <td><?php echo $editlastname; ?></td>
-            </tr>
-            <tr>
-
+    </tr>
+    <tr>
 
             <td>Phone Number</td>
 
@@ -146,48 +142,37 @@ if ($result && $statement->rowCount() > 0) {
             <td>Cell Phone</td>
 
             <td><?php echo $editcellphone; ?></td>
-            </tr>
-            <tr>
+    </tr>
+    <tr>
  
-            <td>Location</td>
+            <td>Date</td>
 
-            <td><?php echo $editlocation; ?></td>
- 
-            <td>Due Date</td>
-
-            <td><?php echo $editduedate; ?></td>
-            </tr>
-            <tr>
+            <td><?php echo $editdate; ?></td>
 
             <td>Status</td>
 
             <td><?php echo $editstatus; ?></td>
-</tr>
+    </tr>
             
-            </table>
+</table>
 <table>
-            <tr>
-            	<th>
-            	</th>
-            	<th>
-            	</th>
-            	<th>
-            	</th>
-            </tr>
-            <tr>
-
-            <tr>
+            
+    <tr>
+            
             </br>
 			<td>Ticket Number:</td>
 
 			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" /></td>
 
-			<td>Coil Number:</td>
+			<td>Coil Number 1</td>
 
-			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editcoi1; ?>&print=true" /></td>
-            <td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editcoi2; ?>&print=true" /></td>
+			<td><img alt="Coil 1" src="barcode.php?text=<?php echo $editcoil1; ?>&print=true" /></td>
 
-</tr>
+            <td>Coil Number 2</td>
+
+            <td><img alt="Coil 2" src="barcode.php?text=<?php echo $editcoil2; ?>&print=true" /></td>
+
+    </tr>
     </table>
     </html>
 
