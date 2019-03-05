@@ -9,8 +9,8 @@
 require "templates/header.php";
 include "templates/password_protect.php"; 
 
-$_GET['searchid'];
-$incommingid = $_GET['searchid'];
+$_GET['editid'];
+$incommingid = $_GET['editid'];
 
 try  {
         
