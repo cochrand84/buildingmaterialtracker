@@ -303,7 +303,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
       </div>
       <div class="col-75">
           
-<input type="text" name="coil1" id="coil1" value="<?php echo $editcoil1; ?>>
+<input type="text" name="coil1" id="coil1" value="<?php echo $editcoil1; ?>">
       
     </div>
     </div>
@@ -313,7 +313,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
       </div>
       <div class="col-75">
           
-<input type="text" name="coil2" id="coil2" value="<?php echo $editcoil1; ?>>
+<input type="text" name="coil2" id="coil2" value="<?php echo $editcoil1; ?>">
       
     </div>
     </div>
