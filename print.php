@@ -111,7 +111,7 @@ if ($result && $statement->rowCount() > 0) {
         echo $_POST['status'];
      } 
 
-
+?>
 
 <h2>Ticket no. <?php echo $editid; ?></h2>
 
