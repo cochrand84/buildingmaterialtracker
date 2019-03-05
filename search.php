@@ -14,12 +14,12 @@ $incommingid = $_GET['searchvalue'];
 
 try  {
         
-        require "../config.php"; 
-        require "../common.php";
+        require "includes/config.php"; 
+        require "includes/common.php";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM `tickets` WHERE (ID = $incommingid)";
+        $sql = "SELECT * FROM `tickets` WHERE $incommingid IN (coil1, coil2, lastname)";
 
         $location = $_POST['location'];
 
