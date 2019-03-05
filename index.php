@@ -7,17 +7,17 @@ include "includes/password_protect.php";
 <form method="get" action="search.php"enctype="multipart/form-data">
 <div class="row">
       <div class="col-25">
-        <label for="notes">Search (Coil # or Customer Lastname)</label>
+        <label for="search">Search (Coil # or Customer Lastname)</label>
       </div>
       <div class="col-75">
-        <input type="text" name="searchid" id="searchid">
+        <input type="text" name="editid" id="editid">
       </div>
     </div>
 </form>
 </div>
 
  <div class="row">
-      <input type="submit" name="search" value="Search">
+      <input type="submit" value="Submit">
     </div>
 <?php 
  
