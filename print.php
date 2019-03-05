@@ -112,8 +112,8 @@ if ($result && $statement->rowCount() > 0) {
      } 
 
 
-<?php } ?>
-<h2>Ticket # <?php echo $editid; ?></h2>
+
+<h2>Ticket no. <?php echo $editid; ?></h2>
 
 <table style="width:100%">
 	<tr>
