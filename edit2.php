@@ -65,7 +65,37 @@ if ($result && $statement->rowCount() > 0) {
             $editdesc4                          = $row["desc4"];
             $editqty5                           = $row["qty5"];
             $editlength5                        = $row["length5"];
-            $editdesc5                          = $row["desc5"];                   
+            $editdesc5                          = $row["desc5"];
+            $editqty6                           = $row["qty6"];
+            $editlength6                        = $row["length6"];
+            $editdesc6                          = $row["desc6"];
+            $editqty7                           = $row["qty7"];
+            $editlength7                        = $row["length7"];
+            $editdesc7                          = $row["desc7"];
+            $editqty8                           = $row["qty8"];
+            $editlength8                        = $row["length8"];
+            $editdesc8                          = $row["desc8"];
+            $editqty9                           = $row["qty9"];
+            $editlength9                        = $row["length9"];
+            $editdesc9                          = $row["desc9"];
+            $editqty10                           = $row["qty10"];
+            $editlength10                        = $row["length10"];
+            $editdesc10                          = $row["desc10"]; 
+            $editqty11                           = $row["qty11"];
+            $editlength11                        = $row["length11"];
+            $editdesc11                          = $row["desc11"];
+            $editqty12                           = $row["qty12"];
+            $editlength12                        = $row["length12"];
+            $editdesc12                          = $row["desc12"];
+            $editqty13                           = $row["qty13"];
+            $editlength13                        = $row["length13"];
+            $editdesc13                          = $row["desc13"];
+            $editqty14                           = $row["qty14"];
+            $editlength14                        = $row["length14"];
+            $editdesc14                          = $row["desc14"];
+            $editqty15                           = $row["qty15"];
+            $editlength15                        = $row["length15"];
+            $editdesc15                          = $row["desc15"];                    
          } 
         } else { 
         echo $_POST['status'];
@@ -107,6 +137,36 @@ if (isset($_POST['submitedit'])) {
             $editedqty5                          = $_POST['qty5'];
             $editedlength5                       = $_POST['length5'];
             $editeddesc5                         = $_POST['desc5'];
+            $editedqty6                          = $_POST['qty6'];
+            $editedlength6                       = $_POST['length6'];
+            $editeddesc6                         = $_POST['desc6'];
+            $editedqty7                          = $_POST['qty7'];
+            $editedlength7                       = $_POST['length7'];
+            $editeddesc7                         = $_POST['desc7'];
+            $editedqty8                          = $_POST['qty8'];
+            $editedlength8                       = $_POST['length8'];
+            $editeddesc8                         = $_POST['desc8'];
+            $editedqty9                          = $_POST['qty9'];
+            $editedlength9                       = $_POST['length9'];
+            $editeddesc9                         = $_POST['desc9'];
+            $editedqty10                         = $_POST['qty10'];
+            $editedlength10                       = $_POST['length10'];
+            $editeddesc10                         = $_POST['desc10'];
+            $editedqty11                          = $_POST['qty11'];
+            $editedlength11                       = $_POST['length11'];
+            $editeddesc11                         = $_POST['desc11'];
+            $editedqty12                          = $_POST['qty12'];
+            $editedlength12                       = $_POST['length12'];
+            $editeddesc12                         = $_POST['desc12'];
+            $editedqty13                          = $_POST['qty13'];
+            $editedlength13                       = $_POST['length13'];
+            $editeddesc13                         = $_POST['desc13'];
+            $editedqty14                          = $_POST['qty14'];
+            $editedlength14                       = $_POST['length14'];
+            $editeddesc14                         = $_POST['desc14'];
+            $editedqty15                          = $_POST['qty15'];
+            $editedlength15                       = $_POST['length15'];
+            $editeddesc15                         = $_POST['desc15'];
            
 
          $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `address` = '$editedaddress', `phone` = '$editedphone', `city` = '$editedcity', `state` = '$editedstate', `status` = '$editedstatus', `color` = '$editedcolor', `date` = '$editeddate'
@@ -271,19 +331,49 @@ if (isset($_POST['submitedit']) && $statement) { ?>
     </div>
       <div id="addinput">
     <p>
-        <input type="text" id="qty1" size="20" name="qty1" value="<?php echo $editqty1; ?>" placeholder="Qty" /><input type="text" id="length1" size="40" name="length1" value="<?php echo $editlength1; ?>" placeholder="Length" /><input type="text" id="desc1" size="40" name="desc1" value="<?php echo $editdesc1; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
+        <input type="text" id="qty1" size="20" name="qty1" value="<?php echo $editqty1; ?>" placeholder="Qty" /><input type="text" id="length1" size="40" name="length1" value="<?php echo $editlength1; ?>" placeholder="Length" /><input type="text" id="desc1" size="40" name="desc1" value="<?php echo $editdesc1; ?>" placeholder="Description" />
     </p>
               <p>
-        <input type="text" id="qty2" size="20" name="qty2" value="<?php echo $editqty2; ?>" placeholder="Qty" /><input type="text" id="length2" size="40" name="length1" value="<?php echo $editlength2; ?>" placeholder="Length" /><input type="text" id="desc2" size="40" name="desc2" value="<?php echo $editdesc2; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
+        <input type="text" id="qty2" size="20" name="qty2" value="<?php echo $editqty2; ?>" placeholder="Qty" /><input type="text" id="length2" size="40" name="length1" value="<?php echo $editlength2; ?>" placeholder="Length" /><input type="text" id="desc2" size="40" name="desc2" value="<?php echo $editdesc2; ?>" placeholder="Description" />
     </p>
               <p>
-        <input type="text" id="qty3" size="20" name="qty3" value="<?php echo $editqty3; ?>" placeholder="Qty" /><input type="text" id="length3" size="40" name="length3" value="<?php echo $editlength3; ?>" placeholder="Length" /><input type="text" id="desc3" size="40" name="desc3" value="<?php echo $editdesc3; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
+        <input type="text" id="qty3" size="20" name="qty3" value="<?php echo $editqty3; ?>" placeholder="Qty" /><input type="text" id="length3" size="40" name="length3" value="<?php echo $editlength3; ?>" placeholder="Length" /><input type="text" id="desc3" size="40" name="desc3" value="<?php echo $editdesc3; ?>" placeholder="Description" />
     </p>
               <p>
-        <input type="text" id="qty4" size="20" name="qty4" value="<?php echo $editqty4; ?>" placeholder="Qty" /><input type="text" id="length4" size="40" name="length4" value="<?php echo $editlength4; ?>" placeholder="Length" /><input type="text" id="desc4" size="40" name="desc4" value="<?php echo $editdesc4; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
+        <input type="text" id="qty4" size="20" name="qty4" value="<?php echo $editqty4; ?>" placeholder="Qty" /><input type="text" id="length4" size="40" name="length4" value="<?php echo $editlength4; ?>" placeholder="Length" /><input type="text" id="desc4" size="40" name="desc4" value="<?php echo $editdesc4; ?>" placeholder="Description" />
     </p>
               <p>
-        <input type="text" id="qty5" size="20" name="qty5" value="<?php echo $editqty5; ?>" placeholder="Qty" /><input type="text" id="length5" size="40" name="length5" value="<?php echo $editlength5; ?>" placeholder="Length" /><input type="text" id="desc5" size="40" name="desc5" value="<?php echo $editdesc5; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
+        <input type="text" id="qty5" size="20" name="qty5" value="<?php echo $editqty5; ?>" placeholder="Qty" /><input type="text" id="length5" size="40" name="length5" value="<?php echo $editlength5; ?>" placeholder="Length" /><input type="text" id="desc5" size="40" name="desc5" value="<?php echo $editdesc5; ?>" placeholder="Description" />
+    </p>
+        <p>
+        <input type="text" id="qty6" size="20" name="qty6" value="<?php echo $editqty6; ?>" placeholder="Qty" /><input type="text" id="length6" size="40" name="length6" value="<?php echo $editlength6; ?>" placeholder="Length" /><input type="text" id="desc6" size="40" name="desc6" value="<?php echo $editdesc6; ?>" placeholder="Description" />
+    </p>
+              <p>
+        <input type="text" id="qty7" size="20" name="qty7" value="<?php echo $editqty7; ?>" placeholder="Qty" /><input type="text" id="length7" size="40" name="length7" value="<?php echo $editlength7; ?>" placeholder="Length" /><input type="text" id="desc7" size="40" name="desc7" value="<?php echo $editdesc7; ?>" placeholder="Description" />
+    </p>
+              <p>
+        <input type="text" id="qty8" size="20" name="qty8" value="<?php echo $editqty8; ?>" placeholder="Qty" /><input type="text" id="length8" size="40" name="length8" value="<?php echo $editlength8; ?>" placeholder="Length" /><input type="text" id="desc8" size="40" name="desc8" value="<?php echo $editdesc8; ?>" placeholder="Description" />
+    </p>
+              <p>
+        <input type="text" id="qty9" size="20" name="qty9" value="<?php echo $editqty9; ?>" placeholder="Qty" /><input type="text" id="length9" size="40" name="length9" value="<?php echo $editlength9; ?>" placeholder="Length" /><input type="text" id="desc9" size="40" name="desc9" value="<?php echo $editdesc9; ?>" placeholder="Description" />
+    </p>
+              <p>
+        <input type="text" id="qty10" size="20" name="qty10" value="<?php echo $editqty10; ?>" placeholder="Qty" /><input type="text" id="length10" size="40" name="length10" value="<?php echo $editlength10; ?>" placeholder="Length" /><input type="text" id="desc10" size="40" name="desc10" value="<?php echo $editdesc10; ?>" placeholder="Description" />
+    </p>
+        <p>
+        <input type="text" id="qty11" size="20" name="qty11" value="<?php echo $editqty11; ?>" placeholder="Qty" /><input type="text" id="length11" size="40" name="length11" value="<?php echo $editlength11; ?>" placeholder="Length" /><input type="text" id="desc11" size="40" name="desc11" value="<?php echo $editdesc11; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
+    </p>
+              <p>
+        <input type="text" id="qty12" size="20" name="qty12" value="<?php echo $editqty12; ?>" placeholder="Qty" /><input type="text" id="length12" size="40" name="length12" value="<?php echo $editlength12; ?>" placeholder="Length" /><input type="text" id="desc12" size="40" name="desc12" value="<?php echo $editdesc12; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
+    </p>
+              <p>
+        <input type="text" id="qty13" size="20" name="qty13" value="<?php echo $editqty13; ?>" placeholder="Qty" /><input type="text" id="length13" size="40" name="length13" value="<?php echo $editlength13; ?>" placeholder="Length" /><input type="text" id="desc13" size="40" name="desc13" value="<?php echo $editdesc13; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
+    </p>
+              <p>
+        <input type="text" id="qty14" size="20" name="qty14" value="<?php echo $editqty14; ?>" placeholder="Qty" /><input type="text" id="length14" size="40" name="length14" value="<?php echo $editlength14; ?>" placeholder="Length" /><input type="text" id="desc14" size="40" name="desc14" value="<?php echo $editdesc14; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
+    </p>
+              <p>
+        <input type="text" id="qty15" size="20" name="qty15" value="<?php echo $editqty15; ?>" placeholder="Qty" /><input type="text" id="length15" size="40" name="length15" value="<?php echo $editlength15; ?>" placeholder="Length" /><input type="text" id="desc5" size="40" name="desc5" value="<?php echo $editdesc15; ?>" placeholder="Description" /><?php include "includes/draw.php"; ?>
     </p>
 </div>
     <div class="row">
