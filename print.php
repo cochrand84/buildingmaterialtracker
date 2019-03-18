@@ -354,7 +354,7 @@ if ($result && $statement->rowCount() > 0) {
 
             <td>Image</td>
 
-            <td><?php echo Image11; ?></td>
+            <td><?php echo "Image11"; ?></td>
 
     </tr> 
             <tr>
