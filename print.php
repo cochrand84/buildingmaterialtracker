@@ -155,7 +155,287 @@ if ($result && $statement->rowCount() > 0) {
     </tr>
             
 </table>
-<table>
+
+<table style="width:90%">
+    <tr>
+        
+            <td>Color</td>
+
+            <td><?php echo $editcolor; ?></td>
+            
+    </tr>
+    <tr>
+
+            <td>Gauge</td>
+
+            <td><?php echo $editgauge; ?></td>
+
+            <td>Delivery Date</td>
+
+            <td><?php echo $editdel; ?></td>
+    </tr>
+    <tr>
+
+            <td>Pickup Time</td>
+
+            <td><?php echo $editpickuptime; ?></td>
+
+            <td>Invoice No.</td>
+
+            <td><?php echo $editinvoicen; ?></td>
+    </tr>            
+</table>
+
+<table style="width:90%">
+    <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty1; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength1; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc1; ?></td>
+
+    </tr>  
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty2; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength2; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc2; ?></td>
+
+    </tr>   
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty3; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength3; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc3; ?></td>
+
+    </tr>   
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty4; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength4; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc4; ?></td>
+
+    </tr>    
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty5; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength5; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc5; ?></td>
+
+    </tr>    
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty6; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength6; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc6; ?></td>
+
+    </tr> 
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty7; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength7; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc7; ?></td>
+
+    </tr> 
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty8; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength8; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc8; ?></td>
+
+    </tr> 
+
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty9; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength9; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc9; ?></td>
+
+    </tr> 
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty10; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength10; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc10; ?></td>
+
+    </tr> 
+        <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty11; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength11; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc11; ?></td>
+
+            <td>Image</td>
+
+            <td><?php echo Image11; ?></td>
+
+    </tr> 
+            <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty12; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength12; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc12; ?></td>
+
+            <td>Image</td>
+
+            <td><?php echo Image12; ?></td>
+
+    </tr>
+            <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty13; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength13; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc13; ?></td>
+
+            <td>Image</td>
+
+            <td><?php echo Image13; ?></td>
+
+    </tr>
+            <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty14; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength14; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc14; ?></td>
+
+            <td>Image</td>
+
+            <td><?php echo Image14; ?></td>
+
+    </tr>
+            <tr>
+
+            <td>Qty</td>
+
+            <td><?php echo $editqty15; ?></td>
+
+            <td>Length</td>
+
+            <td><?php echo $editlength15; ?></td>
+
+            <td>Discription</td>
+
+            <td><?php echo $editdesc15; ?></td>
+
+            <td>Image</td>
+
+            <td><?php echo Image15; ?></td>
+
+    </tr>
+</table>
+
+<table style="width:90%">
             
     <tr>
             
