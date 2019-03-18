@@ -373,7 +373,7 @@ if ($result && $statement->rowCount() > 0) {
 
             <td>Image</td>
 
-            <td><?php echo Image12; ?></td>
+            <td><?php echo "Image12"; ?></td>
 
     </tr>
             <tr>
@@ -392,7 +392,7 @@ if ($result && $statement->rowCount() > 0) {
 
             <td>Image</td>
 
-            <td><?php echo Image13; ?></td>
+            <td><?php echo "Image13"; ?></td>
 
     </tr>
             <tr>
@@ -411,7 +411,7 @@ if ($result && $statement->rowCount() > 0) {
 
             <td>Image</td>
 
-            <td><?php echo Image14; ?></td>
+            <td><?php echo "Image14"; ?></td>
 
     </tr>
             <tr>
@@ -430,7 +430,7 @@ if ($result && $statement->rowCount() > 0) {
 
             <td>Image</td>
 
-            <td><?php echo Image15; ?></td>
+            <td><?php echo "Image15"; ?></td>
 
     </tr>
 </table>
