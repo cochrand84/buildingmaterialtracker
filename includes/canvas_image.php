@@ -62,10 +62,7 @@ function ajaxSend(data, php, via, callback) {
 //register click on #btn_cnvimg to get and save image
 var btn_cnvimg = document.getElementById('btn_cnvimg');
 if(btn_cnvimg) btn_cnvimg.addEventListener('click', function(e){
-  var imgname = null;
 
-  if(imgname !== null){
-    //set data that will be send with ajaxSend() to php (base64 PNG image-data of the canvas, and image-name)
     var img_data = {'cnvimg':cnv.toDataURL('image/png', 1.0), 'imgname':imgname};
 
     //send image-data to php file
@@ -75,7 +72,7 @@ if(btn_cnvimg) btn_cnvimg.addEventListener('click', function(e){
       else alert(resp);
     });
   }
-});
+);
 </script>
 
 
