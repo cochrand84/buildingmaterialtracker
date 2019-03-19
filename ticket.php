@@ -283,7 +283,7 @@ if (isset($_POST['submit'])) {
     <input type="text" id="qty10" size="20" name="qty10" value="" placeholder="Qty" /><input type="text" id="length10" size="40" name="length10" value="" placeholder="Length" /><input type="text" id="desc10" size="40" name="desc10" value="" placeholder="Description" />
     </p>
               <p>
-    <input type="text" id="qty11" size="20" name="qty11" value="" placeholder="Qty" /><input type="text" id="length11" size="40" name="length11" value="" placeholder="Length" /><input type="text" id="desc11" size="40" name="desc11" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
+    <input type="text" id="qty11" size="20" name="qty11" value="" placeholder="Qty" /><input type="text" id="length11" size="40" name="length11" value="" placeholder="Length" /><input type="text" id="desc11" size="40" name="desc11" value="" placeholder="Description" /><?php include "includes/canvas_image.php"; ?>
     </p>
               <p>
     <input type="text" id="qty12" size="20" name="qty12" value="" placeholder="Qty" /><input type="text" id="length12" size="40" name="length12" value="" placeholder="Length" /><input type="text" id="desc12" size="40" name="desc12" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
