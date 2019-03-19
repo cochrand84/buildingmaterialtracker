@@ -7,7 +7,7 @@ $cnvimg = str_replace('data:image/png;base64,', '', $cnvimg);
 $cnvimg = str_replace(' ', '+', $cnvimg);
 
 //set image name from 'imgname', or unique name set with uniqid()
-$imgname = uniqid();
+$imgname = (isset($_POST['imgname']) && !empty(trim($_POST['imgname']))) ? trim(strip_tags($_POST['imgname'])) : uniqid();
 
 //get image data from base64 and save it on server
 $data = base64_decode($cnvimg);
