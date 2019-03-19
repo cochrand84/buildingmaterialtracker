@@ -112,7 +112,29 @@ if ($result && $statement->rowCount() > 0) {
      } 
 
 ?>
-
+<table>
+    <tr>
+        <td>
+<center>Lakeside Building Materials</center>
+</td>
+</tr>
+<tr>
+    <td>
+        3894 S. Eufaula Ave.
+    </td>
+    <td>
+        Phone  334-688-0550
+    </td>
+    </tr>
+    <tr>
+        <td>
+        Eufaula, AL 36027
+</td>
+<td>
+    www.lakesidebuildingmaterials.com
+    </td>
+    </tr>
+</table>
 <h2>Ticket no. <?php echo $editid; ?></h2>
 
 <table style="width:100%">
