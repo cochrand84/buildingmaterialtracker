@@ -84,16 +84,6 @@ if(btn_cnvimg) btn_cnvimg.addEventListener('click', function(e){
 var ctx = cnv.getContext('2d');  //canvas context
 ctx.font = 'bold 28px sans-serif';
 ctx.strokeText('CANVAS - Save this Image', 46, 50);  //Text
-ctx.strokeStyle = '#00f';;
-ctx.lineWidth =2;
-ctx.arc(200,135,50,0,Math.PI*2,true);  //Face
-ctx.moveTo(235,135);
-ctx.arc(200,135,35,0,Math.PI,false);  //Mouth
-ctx.moveTo(190,125);
-ctx.arc(185,125,4,0,Math.PI*2,true);  //Left eye
-ctx.moveTo(220,125);
-ctx.arc(215,125,4,0,Math.PI*2,true);  //Right eye
-ctx.stroke();
 </script>
 </body>
 </html>
