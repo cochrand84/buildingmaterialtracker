@@ -283,19 +283,19 @@ if (isset($_POST['submit'])) {
     <input type="text" id="qty10" size="20" name="qty10" value="" placeholder="Qty" /><input type="text" id="length10" size="40" name="length10" value="" placeholder="Length" /><input type="text" id="desc10" size="40" name="desc10" value="" placeholder="Description" />
     </p>
               <p>
-    <input type="text" id="qty11" size="20" name="qty11" value="" placeholder="Qty" /><input type="text" id="length11" size="40" name="length11" value="" placeholder="Length" /><input type="text" id="desc11" size="40" name="desc11" value="" placeholder="Description" /><?php include "includes/canvas_image.php"; ?>
+    <input type="text" id="qty11" size="20" name="qty11" value="" placeholder="Qty" /><input type="text" id="length11" size="40" name="length11" value="" placeholder="Length" /><input type="text" id="desc11" size="40" name="desc11" value="" placeholder="Description" />
     </p>
               <p>
-    <input type="text" id="qty12" size="20" name="qty12" value="" placeholder="Qty" /><input type="text" id="length12" size="40" name="length12" value="" placeholder="Length" /><input type="text" id="desc12" size="40" name="desc12" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
+    <input type="text" id="qty12" size="20" name="qty12" value="" placeholder="Qty" /><input type="text" id="length12" size="40" name="length12" value="" placeholder="Length" /><input type="text" id="desc12" size="40" name="desc12" value="" placeholder="Description" />
     </p>
               <p>
-    <input type="text" id="qty13" size="20" name="qty13" value="" placeholder="Qty" /><input type="text" id="length13" size="40" name="length5" value="" placeholder="Length" /><input type="text" id="desc13" size="40" name="desc13" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
+    <input type="text" id="qty13" size="20" name="qty13" value="" placeholder="Qty" /><input type="text" id="length13" size="40" name="length5" value="" placeholder="Length" /><input type="text" id="desc13" size="40" name="desc13" value="" placeholder="Description" />
     </p>
               <p>
-    <input type="text" id="qty14" size="20" name="qty14" value="" placeholder="Qty" /><input type="text" id="length14" size="40" name="length14" value="" placeholder="Length" /><input type="text" id="desc14" size="40" name="desc14" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
+    <input type="text" id="qty14" size="20" name="qty14" value="" placeholder="Qty" /><input type="text" id="length14" size="40" name="length14" value="" placeholder="Length" /><input type="text" id="desc14" size="40" name="desc14" value="" placeholder="Description" />
     </p>
               <p>
-    <input type="text" id="qty15" size="20" name="qty15" value="" placeholder="Qty" /><input type="text" id="length15" size="40" name="length15" value="" placeholder="Length" /><input type="text" id="desc15" size="40" name="desc15" value="" placeholder="Description" /><?php include "includes/draw.php"; ?>
+    <input type="text" id="qty15" size="20" name="qty15" value="" placeholder="Qty" /><input type="text" id="length15" size="40" name="length15" value="" placeholder="Length" /><input type="text" id="desc15" size="40" name="desc15" value="" placeholder="Description" />
     </p>
 </div>
     <div class="row">
