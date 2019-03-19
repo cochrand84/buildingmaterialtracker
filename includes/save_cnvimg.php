@@ -1,5 +1,5 @@
 <?php
-define('UPLOAD_DIR', 'uploads/');  //Upload folder
+define('UPLOAD_DIR', '../uploads/');  //Upload folder
 
 //get properly base64 image data passed via post in 'cnvimg'
 $cnvimg = trim(strip_tags($_POST['cnvimg']));
