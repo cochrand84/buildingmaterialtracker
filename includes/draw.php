@@ -9,6 +9,8 @@
     </style>
   </head>
   <body>
+    <div class="container">
+  <form method="post" enctype="multipart/form-data">
     <p><label>Drawing tool: <select id="dtool">
         <option value="line">Line</option>
         <option value="rect">Rectangle</option>
@@ -29,5 +31,10 @@
     </div>
 
     <script type="text/javascript" src="includes/draw.js"></script>
+
+
+          <input type="submit" name="submit" value="Submit">
+    </div>
+  </form>
   </body>
 </html>
